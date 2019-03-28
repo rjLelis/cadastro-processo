@@ -14,5 +14,5 @@ def create_planilha(sender, instance, created, **kwargs):
                 if contador == 0:
                     contador += 1
                     continue
-                processo = Processo(pasta = linha[0], comarca=linha[1], uf = linha[2])
+                processo = Processo(pasta=linha[0], comarca=linha[1], uf=linha[2], cliente=instance)
                 processo.save()
