@@ -1,0 +1,1 @@
+default_app_config = 'cadastro_processo.apps.CadastroProcessoConfig'

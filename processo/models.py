@@ -7,3 +7,6 @@ class Processo(models.Model):
     comarca = models.CharField(max_length=50)
 
     uf = models.CharField(max_length=2)
+
+    def __str__(self):
+        return f'{self.pasta};{self.comarca};{self.uf}'
