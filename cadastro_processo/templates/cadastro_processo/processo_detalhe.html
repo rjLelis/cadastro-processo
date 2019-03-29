@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Processo</title>
-</head>
-<body>
+{% extends 'cadastro_processo/base.html' %}
+{% block title %} Processo {% endblock title %}
+{% block content %}
     <h2>Processo de {{planilha.nome}}</h2>
-</body>
-</html>
+{% endblock content %}

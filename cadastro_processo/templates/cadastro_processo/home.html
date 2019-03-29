@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <title>Processos</title>
-</head>
-<body>
+{% extends 'cadastro_processo/base.html' %}
+{% block title %} Processos {% endblock title %}
+{% block content %}
     <div>
         <a href="{% url 'cadastro_processo:cadastro' %}">Nova Planilha</a>
     </div>
@@ -15,5 +11,4 @@
             <a href="{% url 'cadastro_processo:processo_detalhe' planilha.id %}">detalhes</a>
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}

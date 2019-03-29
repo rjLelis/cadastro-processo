@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro de Planilha</title>
-</head>
-<body>
+{% extends 'cadastro_processo/base.html' %}
+{% block title %} Cadastro de Planilha {% endblock title %}
+{% block content %} 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset>
@@ -13,5 +9,4 @@
         <button type="submit">Submeter</button>
         <a href="{% url 'cadastro_processo:home' %}">Voltar</a>
     </form>
-</body>
-</html>
+{% endblock content %}
