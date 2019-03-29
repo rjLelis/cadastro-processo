@@ -5,4 +5,4 @@ class CadastroProcessoConfig(AppConfig):
     name = 'cadastro_processo'
 
     def ready(self):
-        import cadastro_processo.signal
+        import cadastro_processo.signals

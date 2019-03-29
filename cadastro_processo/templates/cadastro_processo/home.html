@@ -10,8 +10,8 @@
     </div>
     {% for planilha in planilhas %}
         <div>
-            <p>{{ planilha.nome }}</p>
-            <p>{{ planilha.cliente }}</p>
+            <p>Nome: {{ planilha.nome }}</p>
+            <p>Cliente: {{ planilha.cliente }}</p>
             <a href="{% url 'cadastro_processo:processo_detalhe' planilha.id %}">detalhes</a>
         </div>
     {% endfor %}
