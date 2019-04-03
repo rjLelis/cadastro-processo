@@ -23,7 +23,7 @@ def cadastro(request):
 
 def processo_detail(request, id):
     context = {
-        'processo': Processo.objects.filter(cliente_id=id),
+        'processos': Processo.objects.filter(cliente_id=id),
         'planilha': Planilha.objects.get(id=id)
     }
     return render(request, 'cadastro_processo/processo_detalhe.html', context=context)

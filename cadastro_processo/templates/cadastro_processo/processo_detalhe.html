@@ -1,5 +1,20 @@
 {% extends 'cadastro_processo/base.html' %}
 {% block title %} Processo {% endblock title %}
 {% block content %}
-    <h2>Processo de {{planilha.nome}}</h2>
+    <h2>Processo de {{ planilha.nome }}</h2>
+    <table class="table">
+        <tr>
+            <th scope="col">pasta</th>
+            <th scope="col">comarca</th>
+            <th scope="col">UF</th>
+        </tr>
+        {% for processo in processos %}
+        <tr>
+            <td>{{ processo.pasta }}</td>
+            <td>{{ processo.comarca }}</td>
+            <td>{{ processo.uf }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a class="ml-2" href="{% url 'cadastro_processo:home' %}">Voltar</a>
 {% endblock content %}
