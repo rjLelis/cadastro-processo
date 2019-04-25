@@ -1,6 +1,5 @@
-# Desafio Django
+# Implementar uma aplicação usando Django. 
 
-## Implementar uma aplicação usando Django. 
 1. Criar uma App Django contendo um modelo chamado `Processo`, com os seguintes atributos: 
 
 * pasta (String) 
