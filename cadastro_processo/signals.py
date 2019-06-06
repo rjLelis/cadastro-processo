@@ -8,11 +8,8 @@ import csv
 def create_planilha(sender, instance, created, **kwargs):
     if created:
         with open(instance.arquivo.path) as arquivo:
-            leitor = csv.reader(arquivo, delimiter=';')
-            contador = 0
+            leitor = csv.DictReader(arquivo, delimiter=';')
             for linha in leitor:
-                if contador == 0:
-                    contador += 1
-                    continue
-                processo = Processo(pasta=linha[0], comarca=linha[1], uf=linha[2], cliente=instance)
+                pasta, comarca, uf = linha.values()
+                processo = Processo(pasta=pasta, comarca=comarca, uf=uf, cliente=instance)
                 processo.save()
